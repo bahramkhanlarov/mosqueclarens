@@ -93,6 +93,17 @@ ul {
   max-width: 220px;
 }
 
+.brand-eyebrow {
+  display: block;
+  font-family: var(--font);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
