@@ -84,6 +84,23 @@
 
     <p class="note" style="margin-top: 2rem;">Doğrudan bağış yapmak için bu kodu bankanızın uygulamasıyla tarayın (İsviçre QR-fatura ödemesi). Bağışlar veya Zekat hakkında herhangi bir sorunuz için doğrudan bizimle iletişime geçin.</p>
     <a href="/tr/contact.html" class="btn">Bize ulaşın</a>
+
+    <div class="donate-card" data-msg-success="Bağışınız için teşekkür ederiz! Stripe tarafından size bir makbuz gönderildi." data-msg-cancelled="Ödeme iptal edildi. İstediğiniz zaman tekrar deneyebilirsiniz.">
+      <h3 style="color: var(--teal); font-family: Georgia, serif;">Kartla bağış yapın</h3>
+      <p>Ayrıca kredi kartı, Apple Pay veya Google Pay ile doğrudan çevrimiçi bağış yapabilirsiniz.</p>
+      <div class="amount-group" role="group" aria-label="Bağış miktarı">
+        <button type="button" class="amount-btn" data-amount="20">20 CHF</button>
+        <button type="button" class="amount-btn" data-amount="50">50 CHF</button>
+        <button type="button" class="amount-btn" data-amount="100">100 CHF</button>
+        <button type="button" class="amount-btn" data-amount="200">200 CHF</button>
+      </div>
+      <div class="amount-custom">
+        <label for="donate-amount">Diğer miktar (CHF)</label>
+        <input type="number" id="donate-amount" min="1" max="50000" step="0.05" inputmode="decimal">
+      </div>
+      <button type="button" id="donate-submit" class="btn" data-locale="tr" data-msg-empty="Lütfen bir miktar girin." data-msg-error="Bir hata oluştu, lütfen tekrar deneyin.">Bağış yap</button>
+      <p id="donate-message" class="note" hidden></p>
+    </div>
   </div>
 </section>
 
@@ -100,5 +117,6 @@
 </footer>
 
 <script src="/script.js"></script>
+<script src="/donate.js"></script>
 </body>
 </html>

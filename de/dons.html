@@ -84,6 +84,23 @@
 
     <p class="note" style="margin-top: 2rem;">Scannen Sie diesen Code mit Ihrer Banking-App (Schweizer QR-Rechnung), um direkt zu spenden. Bei Fragen zu Spenden oder Zakat kontaktieren Sie uns bitte direkt.</p>
     <a href="/de/contact.html" class="btn">Kontakt aufnehmen</a>
+
+    <div class="donate-card" data-msg-success="Vielen Dank für Ihre Spende! Eine Quittung wurde Ihnen von Stripe zugesandt." data-msg-cancelled="Die Zahlung wurde abgebrochen. Sie können es jederzeit erneut versuchen.">
+      <h3 style="color: var(--teal); font-family: Georgia, serif;">Per Karte spenden</h3>
+      <p>Sie können auch direkt online per Karte, Apple Pay oder Google Pay spenden.</p>
+      <div class="amount-group" role="group" aria-label="Spendenbetrag">
+        <button type="button" class="amount-btn" data-amount="20">20 CHF</button>
+        <button type="button" class="amount-btn" data-amount="50">50 CHF</button>
+        <button type="button" class="amount-btn" data-amount="100">100 CHF</button>
+        <button type="button" class="amount-btn" data-amount="200">200 CHF</button>
+      </div>
+      <div class="amount-custom">
+        <label for="donate-amount">Anderer Betrag (CHF)</label>
+        <input type="number" id="donate-amount" min="1" max="50000" step="0.05" inputmode="decimal">
+      </div>
+      <button type="button" id="donate-submit" class="btn" data-locale="de" data-msg-empty="Bitte geben Sie einen Betrag ein." data-msg-error="Es ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.">Spenden</button>
+      <p id="donate-message" class="note" hidden></p>
+    </div>
   </div>
 </section>
 
@@ -100,5 +117,6 @@
 </footer>
 
 <script src="/script.js"></script>
+<script src="/donate.js"></script>
 </body>
 </html>

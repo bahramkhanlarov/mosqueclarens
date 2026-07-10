@@ -84,6 +84,23 @@
 
     <p class="note" style="margin-top: 2rem;">Scan this code with your banking app (Swiss QR-bill payment) to donate directly. For any questions about donations or Zakat, please contact us directly.</p>
     <a href="/en/contact.html" class="btn">Contact us</a>
+
+    <div class="donate-card" data-msg-success="Thank you for your donation! A receipt has been sent to you by Stripe." data-msg-cancelled="The payment was cancelled. You can try again at any time.">
+      <h3 style="color: var(--teal); font-family: Georgia, serif;">Donate by card</h3>
+      <p>You can also give directly online by card, Apple Pay or Google Pay.</p>
+      <div class="amount-group" role="group" aria-label="Donation amount">
+        <button type="button" class="amount-btn" data-amount="20">20 CHF</button>
+        <button type="button" class="amount-btn" data-amount="50">50 CHF</button>
+        <button type="button" class="amount-btn" data-amount="100">100 CHF</button>
+        <button type="button" class="amount-btn" data-amount="200">200 CHF</button>
+      </div>
+      <div class="amount-custom">
+        <label for="donate-amount">Other amount (CHF)</label>
+        <input type="number" id="donate-amount" min="1" max="50000" step="0.05" inputmode="decimal">
+      </div>
+      <button type="button" id="donate-submit" class="btn" data-locale="en" data-msg-empty="Please enter an amount." data-msg-error="Something went wrong, please try again.">Donate</button>
+      <p id="donate-message" class="note" hidden></p>
+    </div>
   </div>
 </section>
 
@@ -100,5 +117,6 @@
 </footer>
 
 <script src="/script.js"></script>
+<script src="/donate.js"></script>
 </body>
 </html>
