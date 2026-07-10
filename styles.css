@@ -591,3 +591,38 @@ table.prayer-table {
     text-align: center;
   }
 }
+
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.lang-switcher a {
+  color: var(--dark);
+  opacity: 0.5;
+  padding: 0.2rem 0.25rem;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.lang-switcher a:hover,
+.lang-switcher a.lang-current {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* RTL support */
+[dir="rtl"] .prayer-table th,
+[dir="rtl"] .prayer-table td {
+  text-align: right;
+}
+
+[dir="rtl"] .nav-links a[aria-current="page"],
+[dir="rtl"] .nav-links a:hover {
+  border-color: var(--gold);
+}
